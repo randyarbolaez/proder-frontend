@@ -58,7 +58,17 @@ const ModalComponent = (props) => {
 
   return (
     <div>
-      <Button type="button" onClick={handleOpen}>
+      <Button
+        style={{
+          background: "none",
+          border: "none",
+          color: "#fbceb5",
+          fontSize: "2.5vw",
+          outline: "none",
+        }}
+        type="button"
+        onClick={handleOpen}
+      >
         {props.buttonName}
       </Button>
       <Modal
