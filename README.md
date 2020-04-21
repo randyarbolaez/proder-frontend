@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Check it out
+
+[https://proder-frontend.randyarbolaez0.now.sh/](https://proder-frontend.randyarbolaez0.now.sh/)
+
+## Backend
+
+[https://github.com/randyarbolaez/proder-api](https://github.com/randyarbolaez/proder-api)
 
 ## Available Scripts
 
