@@ -5,10 +5,13 @@ import ReduxThunk from "redux-thunk";
 import { Scrollbars } from "react-custom-scrollbars";
 
 import projectsReducer from "./store/reducers/projects-reducer";
+import messagesReducer from "./store/reducers/messages-reducer";
+
 import Home from "./components/Home";
 
 const rootReducer = combineReducers({
   project: projectsReducer,
+  message: messagesReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(ReduxThunk));

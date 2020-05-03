@@ -7,7 +7,7 @@ export const SEARCH_PROJECTS = "SEARCH_PROJECTS";
 export const fetchProjects = () => {
   return async (dispatch) => {
     try {
-      const res = await fetch(`${ENV.apiUrl}project/projects`);
+      const res = await fetch(`${ENV.apiUrl}/project/projects`);
 
       if (!res.ok) {
         throw new Error("Something went wrong!");
@@ -44,7 +44,7 @@ export const searchProjects = (value, projects) => {
 
 export const createProject = (title, description) => {
   return async (dispatch) => {
-    const res = await fetch(`${ENV.apiUrl}project/create`, {
+    const res = await fetch(`${ENV.apiUrl}/project/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

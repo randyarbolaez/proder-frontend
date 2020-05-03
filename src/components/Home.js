@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Nav from "./Nav";
 import Project from "./Project";
+import MessageRoom from "./MessageRoom";
 
 const Svg = styled.svg`
   /* width: 100vw;
@@ -25,14 +26,14 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-const Span = styled.div`
-  background-color: #fbe7b5;
-  text-align: center;
-  padding-top: 10rem;
-  border-bottom-left-radius: 50rem;
-  border-bottom-right-radius: 40rem;
-  margin-top: 0;
-`;
+// const Span = styled.div`
+//   background-color: #fbe7b5;
+//   text-align: center;
+//   padding-top: 10rem;
+//   border-bottom-left-radius: 50rem;
+//   border-bottom-right-radius: 40rem;
+//   margin-top: 0;
+// `;
 
 const Home = () => {
   return (
@@ -51,6 +52,7 @@ const Home = () => {
         </g>
       </Svg>
       <Project />
+      <MessageRoom />
     </Container>
   );
 };

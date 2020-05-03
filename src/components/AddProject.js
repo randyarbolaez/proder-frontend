@@ -55,6 +55,7 @@ const AddProject = () => {
     let action = projectActions.createProject(title, description);
     if (title.length < 3 || description.length < 15) {
       setError(true);
+      console.log(error);
     }
     try {
       await dispatch(action);
