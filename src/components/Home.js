@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import Nav from "./Nav";
@@ -35,7 +35,26 @@ const Container = styled.div`
 //   margin-top: 0;
 // `;
 
+const InputContainer = styled.div`
+  text-align: center;
+`;
+
+const Input = styled.input`
+  border: none;
+  background-color: #ffffcf;
+  color: #8c8c8c;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+  padding: 2vw;
+  font-size: 1vw;
+  &:hover {
+    background-color: #8c8c8c;
+    color: #ffffcf;
+  }
+`;
+
 const Home = () => {
+  const [showMessageRoom, setShowMessageRoom] = useState(false);
   return (
     <Container>
       <Nav />
@@ -52,7 +71,16 @@ const Home = () => {
         </g>
       </Svg>
       <Project />
-      <MessageRoom />
+      <InputContainer>
+        <Input
+          type="button"
+          value={showMessageRoom ? "Hide ChatRoom" : "Show ChatRoom"}
+          onClick={() => {
+            setShowMessageRoom(!showMessageRoom);
+          }}
+        />
+      </InputContainer>
+      {showMessageRoom && <MessageRoom />}
     </Container>
   );
 };
